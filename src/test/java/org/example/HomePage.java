@@ -18,7 +18,7 @@ public class HomePage {
     }
 
     @Test
-    public void testGmailLogin() throws InterruptedException {
+    public void testHomepage() throws InterruptedException {
         // Go to YouTube website
         chromeDriver.get("https://youtube.com/");
         Thread.sleep(1000);
