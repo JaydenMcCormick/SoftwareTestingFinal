@@ -1,6 +1,5 @@
 package org.example;
 
-import org.apache.commons.io.input.WindowsLineEndingInputStream;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
