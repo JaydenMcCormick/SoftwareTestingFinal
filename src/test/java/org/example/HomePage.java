@@ -37,7 +37,7 @@ public class HomePage {
         WebElement emailNext = chromeDriver.findElement(By.xpath("//*[@id=\"identifierNext\"]/div/button/span"));
         emailNext.click();
 
-        Thread.sleep(3000);
+        Thread.sleep(3500);
 
         // Find the password text box and enter the password
         WebElement passInput = chromeDriver.findElement(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input"));
@@ -48,7 +48,7 @@ public class HomePage {
         WebElement passNext = chromeDriver.findElement(By.xpath("//*[@id=\"passwordNext\"]/div/button/span"));
         passNext.click();
 
-        Thread.sleep(2500);
+        Thread.sleep(3000);
 
         // Find "Subscriptions" on the left banner and click
         WebElement subscriptionsTab = chromeDriver.findElement(By.xpath("/html/body/ytd-app/div[1]/tp-yt-app-drawer/div[2]/div/div[2]/div[2]/ytd-guide-renderer/div[1]/ytd-guide-section-renderer[1]/div/ytd-guide-entry-renderer[3]/a/tp-yt-paper-item/yt-formatted-string"));
