@@ -43,15 +43,45 @@ public class Video_Player {
     @Test(description = "Test 3 Commenting")
     public void Commenting() throws InterruptedException {
         Thread.sleep(7000);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        // Find the email text box and enter the email
+        WebElement loginButton = driver.findElement(By.xpath("//*[@id=\"buttons\"]/ytd-button-renderer/yt-button-shape/a/yt-touch-feedback-shape/div/div[2]"));
+        loginButton.click();
+
+        WebElement emailInput = driver.findElement(By.xpath("//*[@id=\"identifierId\"]"));
+        emailInput.sendKeys("j9095327@gmail.com");
+        Thread.sleep(1000);
+
+        // Find the next button and click it
+        WebElement emailNext = driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/div/button/span"));
+        emailNext.click();
+
+        Thread.sleep(5000);
+
+        // Find the password text box and enter the password
+        WebElement passInput = driver.findElement(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input"));
+        passInput.sendKeys("QwertyuioP1234567890!");
+        Thread.sleep(1000);
+
+        // Find the next button and click it
+        WebElement passNext = driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/div/button/span"));
+        passNext.click();
+
+        Thread.sleep(7000);
+        JavascriptExecutor js =(JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0, 500)");
-        Thread.sleep(3000);
+        Thread.sleep(2500);
         WebElement comment = driver.findElement(By.cssSelector("ytd-comments ytd-comment-simplebox-renderer div#placeholder-area"));
         comment.click();
+
         comment = driver.findElement(By.cssSelector("#contenteditable-root"));
+
         Thread.sleep(2000);
         comment.sendKeys("hi");
         Thread.sleep(2000);
+
+        //WebElement submit_button = driver.findElement(By.xpath("//*[@id=\"submit-button\"]/yt-button-shape/button"));
+        //submit_button.click();
+
     }
 
     @Test(description = "Test 4 Volume")
@@ -127,7 +157,7 @@ public class Video_Player {
         theatre.click();
         //sometimes div[29] works, sometimes div[33] works idk why
     }
-
+/*
     @AfterClass
     public void tearDown() throws InterruptedException {
         // Close the WebDriver
@@ -136,6 +166,8 @@ public class Video_Player {
             driver.quit();
         }
     }
+
+ */
 }
 
 
