@@ -77,59 +77,72 @@ public class Subscriptions {
 
         Thread.sleep(2500);
 
+        // Refresh so the subscriptions update
         chromeDriver.navigate().refresh();
         Thread.sleep(1500);
 
+        // Open subscribed channel on the left
         WebElement subscribed = chromeDriver.findElement(By.xpath("/html/body/ytd-app/div[1]/tp-yt-app-drawer/div[2]/div/div[2]/div[2]/ytd-guide-renderer/div[1]/ytd-guide-section-renderer[2]/div/ytd-guide-entry-renderer[1]/a/tp-yt-paper-item/yt-formatted-string"));
         subscribed.click();
 
         Thread.sleep(2500);
 
+        // Open subscriptions tab on left
         WebElement subscriptionsTab = chromeDriver.findElement(By.xpath("/html/body/ytd-app/div[1]/tp-yt-app-drawer/div[2]/div/div[2]/div[2]/ytd-guide-renderer/div[1]/ytd-guide-section-renderer[1]/div/ytd-guide-entry-renderer[3]/a/tp-yt-paper-item/yt-formatted-string"));
         subscriptionsTab.click();
 
         Thread.sleep(2500);
 
+        // Open list view at top right
         WebElement listView = chromeDriver.findElement(By.xpath("//*[@id=\"top-level-buttons-computed\"]/ytd-button-renderer[2]/yt-button-shape"));
         listView.click();
 
         Thread.sleep(3750);
 
+        // Go back to grid view
         WebElement gridView = chromeDriver.findElement(By.xpath("//*[@id=\"top-level-buttons-computed\"]/ytd-button-renderer/yt-button-shape/a"));
         gridView.click();
 
         Thread.sleep(2500);
 
+        // Press view all button to view all shorts
         WebElement shorts = chromeDriver.findElement(By.linkText("View all"));
         shorts.click();
 
         Thread.sleep(2500);
 
+        // Go back to subscriptions
         WebElement subscriptionsTab1 = chromeDriver.findElement(By.xpath("/html/body/ytd-app/div[1]/tp-yt-app-drawer/div[2]/div/div[2]/div[2]/ytd-guide-renderer/div[1]/ytd-guide-section-renderer[1]/div/ytd-guide-entry-renderer[3]/a/tp-yt-paper-item/yt-formatted-string"));
         subscriptionsTab1.click();
 
         Thread.sleep(2500);
 
+        // Manage button to view / manage current subscriptions
         WebElement manageButton = chromeDriver.findElement(By.xpath("//*[@id=\"subscribe-button\"]/ytd-button-renderer/yt-button-shape"));
         manageButton.click();
 
         Thread.sleep(2500);
 
+        // Press subscribed button
         WebElement subButton = chromeDriver.findElement(By.xpath("//*[@id=\"notification-preference-button\"]/ytd-subscription-notification-toggle-button-renderer-next/yt-button-shape"));
         subButton.click();
         Thread.sleep(2500);
 
+        // Unsubscribe
         WebElement unsub = chromeDriver.findElement(By.xpath("/html/body/ytd-app/ytd-popup-container/tp-yt-iron-dropdown/div/ytd-menu-popup-renderer/tp-yt-paper-listbox/ytd-menu-service-item-renderer[4]/tp-yt-paper-item"));
         unsub.click();
         Thread.sleep(1500);
 
+        // Confirm
         WebElement confirmUnsub = chromeDriver.findElement(By.xpath("/html/body/ytd-app/ytd-popup-container/tp-yt-paper-dialog/yt-confirm-dialog-renderer/div[2]/div[2]/yt-button-renderer[3]/yt-button-shape/button/yt-touch-feedback-shape/div"));
         confirmUnsub.click();
         Thread.sleep(2500);
 
+        // Refresh to update left banner
         chromeDriver.navigate().refresh();
         Thread.sleep(3500);
 
+        // Reopen subscriptions tab to show update w/o subscribed channel
         WebElement subscriptionsTab2 = chromeDriver.findElement(By.xpath("/html/body/ytd-app/div[1]/tp-yt-app-drawer/div[2]/div/div[2]/div[2]/ytd-guide-renderer/div[1]/ytd-guide-section-renderer[1]/div/ytd-guide-entry-renderer[3]/a/tp-yt-paper-item/yt-formatted-string"));
         subscriptionsTab2.click();
 
