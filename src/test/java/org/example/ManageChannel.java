@@ -18,7 +18,7 @@ public class ManageChannel {
     public void testHomepage() throws InterruptedException {
         /*
         Names and handles can only be changed twice every 14 days, so a new email and password are used for this test
-        Email:
+        Email: ridgewaykeyan@gmail.com
         Password: Qwertyuiop1234567890!
          */
 
@@ -33,7 +33,7 @@ public class ManageChannel {
         loginButton.click();
 
         WebElement emailInput = chromeDriver.findElement(By.xpath("//*[@id=\"identifierId\"]"));
-        emailInput.sendKeys("j9095327@gmail.com");
+        emailInput.sendKeys("ridgewaykeyan@gmail.com");
         Thread.sleep(1000);
 
         // Find the next button and click it
@@ -93,13 +93,13 @@ public class ManageChannel {
         // this is changing the profile name and handle, 2 times per 14 days so it cannot be tested more, but was working
 //        WebElement name = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/iron-pages/div[3]/ytcp-channel-editing-details-tab/div/section[1]/ytcp-channel-editing-channel-name/div[2]/ytcp-form-input-container/div[1]/div/input"));
 //        name.sendKeys(Keys.CONTROL + "a");
-//        name.sendKeys("Jayden");
+//        name.sendKeys("Keyan");
 //
 //        Thread.sleep(1500);
 //
 //        WebElement handle = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/iron-pages/div[3]/ytcp-channel-editing-details-tab/div/section[1]/ytcp-channel-editing-channel-handle/div/ytcp-form-input-container/div[1]/div/div/input"));
 //        handle.sendKeys(Keys.CONTROL + "a");
-//        handle.sendKeys("Jayden-234");
+//        handle.sendKeys("Keyan-234");
 //
 //        Thread.sleep(2500);
 
@@ -113,6 +113,7 @@ public class ManageChannel {
 
         // Publish changes
         WebElement publish = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/ytcp-sticky-header/ytcp-primary-action-bar/div/div[2]/ytcp-button[3]"));
+        Thread.sleep(10000);
         publish.click();
         Thread.sleep(3500);
 

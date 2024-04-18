@@ -19,7 +19,7 @@ public class Video_Player {
     public void setUp() {
         driver = new ChromeDriver();
         //System.setProperty("webdriver.chrome.driver", "/Users/keyanridgeway/Downloads");
-        driver.get("https://www.youtube.com/watch?v=TuUTHYTDtmM&t=891s");
+        driver.get("https://www.youtube.com/watch?v=BR2VC6d53D4");
     }
 
     @Test(description = "Test 1 Play/Pause")
@@ -32,9 +32,8 @@ public class Video_Player {
 
     @Test(description = "Test 2 Fullscreen")
     public void Fullscreen() throws InterruptedException {
-        driver.manage().window().maximize();
         Thread.sleep(5000);
-        WebElement full = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[29]/div[2]/div[2]/button[9]"));
+        WebElement full = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[38]/div[2]/div[2]/button[9]"));
         Thread.sleep(3000);
         full.click();
         Thread.sleep(3000);
@@ -87,7 +86,7 @@ public class Video_Player {
     @Test(description = "Test 4 Volume")
     public void Volume() throws InterruptedException {
         Thread.sleep(5000);
-        WebElement Vol = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[29]/div[2]/div[1]/span/button"));
+        WebElement Vol = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[38]/div[2]/div[1]/span/button"));
         Thread.sleep(2000);
         Vol.click();
     }
@@ -112,7 +111,7 @@ public class Video_Player {
         WebElement options = driver.findElement(By.xpath("//*[@id=\"button-shape\"]/button"));
         options.click();
         Thread.sleep(2000);
-        WebElement save = driver.findElement(By.xpath("//*[@id=\"items\"]/ytd-menu-service-item-renderer"));//if signed in, its renderer[3]
+        WebElement save = driver.findElement(By.xpath("//*[@id=\"items\"]/ytd-menu-service-item-renderer[3]"));//if signed in, its renderer[3]
         save.click();
     }
 
@@ -126,14 +125,14 @@ public class Video_Player {
     @Test(description = "Test 9 Captions")
     public void captions() throws InterruptedException {
         Thread.sleep(7000);
-        WebElement caption = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[29]/div[2]/div[2]/button[3]"));
+        WebElement caption = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[28]/div[2]/div[2]/button[3]"));
         caption.click();
     }
 
     @Test(description = "Test 10 Mini_player")
     public void mini_player() throws InterruptedException {
         Thread.sleep(7000);
-        WebElement mini = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[29]/div[2]/div[2]/button[5]"));
+        WebElement mini = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[38]/div[2]/div[2]/button[5]"));
         mini.click();
         /*Thread.sleep(2000);
         WebElement mini_select = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[22]/div"));
@@ -151,13 +150,12 @@ public class Video_Player {
     @Test(description = "Test 11 Theatre mode")
     public void Theatre() throws InterruptedException {
         Thread.sleep(7000);
-        WebElement theatre = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[29]/div[2]/div[2]/button[7]"));
+        WebElement theatre = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[38]/div[2]/div[2]/button[7]"));
         theatre.click();
         Thread.sleep(1000);
         theatre.click();
         //sometimes div[29] works, sometimes div[33] works idk why
     }
-/*
     @AfterClass
     public void tearDown() throws InterruptedException {
         // Close the WebDriver
@@ -166,8 +164,6 @@ public class Video_Player {
             driver.quit();
         }
     }
-
- */
 }
 
 
