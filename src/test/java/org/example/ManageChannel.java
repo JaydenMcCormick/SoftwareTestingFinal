@@ -15,7 +15,7 @@ public class ManageChannel {
     }
 
     @Test
-    public void testHomepage() throws InterruptedException {
+    public void testManage() throws InterruptedException {
         /*
         Names and handles can only be changed twice every 14 days, so a new email and password are used for this test
         Email: ridgewaykeyan@gmail.com
@@ -51,7 +51,7 @@ public class ManageChannel {
         WebElement passNext = chromeDriver.findElement(By.xpath("//*[@id=\"passwordNext\"]/div/button/span"));
         passNext.click();
 
-        Thread.sleep(3000);
+        Thread.sleep(3500);
 
         // Click on profile on the top left
         WebElement profileButton = chromeDriver.findElement(By.xpath("/html/body/ytd-app/div[1]/div/ytd-masthead/div[4]/div[3]/div[2]/ytd-topbar-menu-button-renderer[2]/button/yt-img-shadow/img"));
@@ -66,7 +66,7 @@ public class ManageChannel {
         Thread.sleep(3500);
 
         // Open customization tab
-        WebElement customize = chromeDriver.findElement(By.xpath("/html/body/ytd-app/div[1]/ytd-page-manager/ytd-browse[2]/div[3]/ytd-tabbed-page-header/tp-yt-app-header-layout/div/tp-yt-app-header/div[2]/div/div/yt-page-header-renderer/yt-page-header-view-model/div/div[1]/div/yt-flexible-actions-view-model/div[1]/button-view-model/a"));
+        WebElement customize = chromeDriver.findElement(By.xpath("/html/body/ytd-app/div[1]/ytd-page-manager/ytd-browse[2]/div[3]/ytd-c4-tabbed-header-renderer/tp-yt-app-header-layout/div/tp-yt-app-header/div/div/div/div[1]/div/div[2]/div[4]/ytd-button-renderer[1]/yt-button-shape/a"));
         customize.click();
         Thread.sleep(3500);
 
@@ -91,17 +91,17 @@ public class ManageChannel {
         Thread.sleep(2000);
 
         // this is changing the profile name and handle, 2 times per 14 days so it cannot be tested more, but was working
-//        WebElement name = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/iron-pages/div[3]/ytcp-channel-editing-details-tab/div/section[1]/ytcp-channel-editing-channel-name/div[2]/ytcp-form-input-container/div[1]/div/input"));
-//        name.sendKeys(Keys.CONTROL + "a");
-//        name.sendKeys("Keyan");
-//
-//        Thread.sleep(1500);
-//
-//        WebElement handle = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/iron-pages/div[3]/ytcp-channel-editing-details-tab/div/section[1]/ytcp-channel-editing-channel-handle/div/ytcp-form-input-container/div[1]/div/div/input"));
-//        handle.sendKeys(Keys.CONTROL + "a");
-//        handle.sendKeys("Keyan-234");
-//
-//        Thread.sleep(2500);
+        WebElement name = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/iron-pages/div[3]/ytcp-channel-editing-details-tab/div/section[1]/ytcp-channel-editing-channel-name/div[2]/ytcp-form-input-container/div[1]/div/input"));
+        name.sendKeys(Keys.CONTROL + "a");
+        name.sendKeys("Keyan");
+
+        Thread.sleep(1500);
+
+        WebElement handle = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/iron-pages/div[3]/ytcp-channel-editing-details-tab/div/section[1]/ytcp-channel-editing-channel-handle/div/ytcp-form-input-container/div[1]/div/div/input"));
+        handle.sendKeys(Keys.CONTROL + "a");
+        handle.sendKeys("Jayden-8612abc3fhg45");
+
+        Thread.sleep(2500);
 
         // Select and edit description
         WebElement description = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/iron-pages/div[3]/ytcp-channel-editing-details-tab/div/section[1]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"));
@@ -113,7 +113,7 @@ public class ManageChannel {
 
         // Publish changes
         WebElement publish = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/ytcp-sticky-header/ytcp-primary-action-bar/div/div[2]/ytcp-button[3]"));
-        Thread.sleep(10000);
+        Thread.sleep(3500);
         publish.click();
         Thread.sleep(3500);
 

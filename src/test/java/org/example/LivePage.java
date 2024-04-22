@@ -13,7 +13,7 @@ public class LivePage {
     }
 
     @Test
-    public void testHomepage() throws InterruptedException {
+    public void tesLivepage() throws InterruptedException {
         chromeDriver.get("https://youtube.com/");
         chromeDriver.manage().window().maximize();
 

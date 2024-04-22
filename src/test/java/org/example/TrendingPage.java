@@ -13,7 +13,7 @@ public class TrendingPage {
     }
 
     @Test
-    public void testHomepage() throws InterruptedException {
+    public void testTrending() throws InterruptedException {
         // Go to YouTube website
         chromeDriver.get("https://youtube.com/");
         Thread.sleep(1000);
@@ -81,10 +81,15 @@ public class TrendingPage {
 
         Thread.sleep(2000);
 
-        WebElement firstVideo = chromeDriver.findElement(By.xpath("//*[@id=\"title-wrapper\"]/h3"));
-        firstVideo.click();
+        JavascriptExecutor js = (JavascriptExecutor) chromeDriver;
+        js.executeScript("window.scrollTo(0, 0)");
 
         Thread.sleep(2000);
+
+        WebElement firstVideo = chromeDriver.findElement(By.xpath("//*[@id=\"title-wrapper\"]/h3"));
+        js.executeScript("arguments[0].click();", firstVideo);
+
+        Thread.sleep(3500);
     }
 
     @AfterMethod

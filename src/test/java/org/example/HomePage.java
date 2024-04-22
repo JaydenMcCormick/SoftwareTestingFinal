@@ -37,7 +37,7 @@ public class HomePage {
         WebElement emailNext = chromeDriver.findElement(By.xpath("//*[@id=\"identifierNext\"]/div/button/span"));
         emailNext.click();
 
-        Thread.sleep(3500);
+        Thread.sleep(3750);
 
         // Find the password text box and enter the password
         WebElement passInput = chromeDriver.findElement(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input"));

@@ -13,7 +13,7 @@ public class SearchPage {
     }
 
     @Test
-    public void testHomepage() throws InterruptedException {
+    public void testSearching() throws InterruptedException {
         chromeDriver.get("https://youtube.com/");
         Thread.sleep(1000);
 

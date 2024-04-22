@@ -13,7 +13,7 @@ public class ChannelPage {
     }
 
     @Test
-    public void testHomepage() throws InterruptedException {
+    public void testChannelpage() throws InterruptedException {
         chromeDriver.get("https://youtube.com/");
         Thread.sleep(1000);
 

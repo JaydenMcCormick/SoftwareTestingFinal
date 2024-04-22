@@ -5,7 +5,7 @@
         <classes>
             <class name="org.example.ChannelPage">
                 <methods>
-                    <include name="testHomepage"/>
+                    <include name="testChannelpage"/>
                 </methods>
             </class>
             <class name="org.example.HomePage">
@@ -15,32 +15,27 @@
             </class>
             <class name="org.example.LivePage">
                 <methods>
-                    <include name="testHomepage"/>
+                    <include name="tesLivepage"/>
                 </methods>
             </class>
             <class name="org.example.ManageChannel">
                 <methods>
-                    <include name="testHomepage"/>
+                    <include name="testManage"/>
                 </methods>
             </class>
             <class name="org.example.SearchPage">
                 <methods>
-                    <include name="testHomepage"/>
+                    <include name="testSearching"/>
                 </methods>
             </class>
             <class name="org.example.Subscriptions">
                 <methods>
-                    <include name="testHomepage"/>
+                    <include name="testSubscriptions"/>
                 </methods>
             </class>
             <class name="org.example.TrendingPage">
                 <methods>
-                    <include name="testHomepage"/>
-                </methods>
-            </class>
-            <class name="org.example.VideoPage">
-                <methods>
-                    <include name="testHomepage"/>
+                    <include name="testTrending"/>
                 </methods>
             </class>
             <class name="org.example.Video_Player">
