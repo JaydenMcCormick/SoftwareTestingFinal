@@ -99,7 +99,7 @@ public class ManageChannel {
 
         WebElement handle = chromeDriver.findElement(By.xpath("/html/body/ytcp-app/ytcp-entity-page/div/div/main/div/ytcp-animatable[6]/ytcp-channel-editing-section/iron-pages/div[3]/ytcp-channel-editing-details-tab/div/section[1]/ytcp-channel-editing-channel-handle/div/ytcp-form-input-container/div[1]/div/div/input"));
         handle.sendKeys(Keys.CONTROL + "a");
-        handle.sendKeys("Jayden-sad1w20a9sdj2984893fs13fhg45");
+        handle.sendKeys("Jaydens12376");
 
         Thread.sleep(2500);
 
